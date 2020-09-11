@@ -30,8 +30,10 @@ let me = {
     firstName: 'Dylan',
     superHeroName: 'Vulkan',
     homeTown: 'Fort Worth',
-    superPowers: ['Super Speed', 'Mind Read', 'Electricity']
-    profileImage: function(){ return `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`}
+    superPowers: ['Super Speed', 'Mind Read', 'Electricity'],
+    profileImage: function(){ 
+        return `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`
+    }
 }
 
 
