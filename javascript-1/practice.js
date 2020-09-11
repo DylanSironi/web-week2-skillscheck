@@ -67,7 +67,7 @@ function oddChecker(num){
 //Code Here
 
 function iLove(name, love){
-	// return '${name} 'loves' ${love}'
+	return `${name} 'loves' ${love}`
 }
 
 iLove('bryan', 'skateboarding')
@@ -91,7 +91,7 @@ colorCopy.push('blue')
 
 //////////////////PROBLEM 10////////////////////
 
-// Create a new array called 'middleNums' from the numbers array that will capture only the middle numbers (2, 3, 4).
+// Create a new array called 'middleNums' from the numbers array that will capture only the middle numbers (2, 3, 4). $
 const numbers = [1, 2, 3, 4, 5]
 
 //Code Here
@@ -109,7 +109,7 @@ let me = {
 	state: 'Texas',
 	age: 20,
 	greeter: function me(){
-		return 'Hello! My name is ${me.firstName} and I live in ${me.state}'
+		return `Hello! My name is ${me.firstName} and I live in ${me.state}`
 	}
 }
 
