@@ -4,11 +4,15 @@
 
 // Code here
 
+let myName = 'Dylan'
+
 //////////////////PROBLEM 2////////////////////
 
 // Create a variable called 'faveNum' with a value that is your favorite number. 
 
 //Code here
+
+let faveNum = 117
 
 //////////////////PROBLEM 3////////////////////
 
@@ -16,11 +20,17 @@
 
 //Code here
 
+var lovesCode = true
+
 //////////////////PROBLEM 4////////////////////
 
 // Create a function called 'sum' that takes in two parameters, 'num1' and 'num2'. The function should return the sum of the two parameters.
 
 //Code here
+
+function sum(num1, num2){
+	return num1 + num2
+}
 
 //////////////////PROBLEM 5////////////////////
 
@@ -28,17 +38,39 @@
 
 //Code here
 
+function lovesCodeChecker(x){
+	if(x === true){
+		return true
+	}else{
+		return false
+	}
+}
+
 //////////////////PROBLEM 6////////////////////
 
 // Create a function called 'oddChecker' that takes in one parameter, 'num'. Your function should check to see if the parameter is even or odd. If the parameter is odd, return 'the number is odd'. If the number is even, return 'the number is even'.
 
 //Code here
 
+function oddChecker(num){
+	if(num % 2 === 0){
+		return 'the number is even'
+	}else {
+		return 'the number is odd'
+	}
+}
+
 //////////////////PROBLEM 7////////////////////
 
 // Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. Have the function take the two parameters and return a string that says "NAMEPARAM loves LOVEPARAM" with the appropriate parameters in the string. e.g. "Joseph loves music"
 
 //Code Here
+
+function iLove(name, love){
+	// return '${name} 'loves' ${love}'
+}
+
+iLove('bryan', 'skateboarding')
 
 //////////////////PROBLEM 8////////////////////
 
@@ -47,11 +79,15 @@ const faveColors = ['red', 'green', 'black']
 
 //Code Here
 
+let colorCopy = faveColors.slice(0)
+
 //////////////////PROBLEM 9////////////////////
 
 // Add a fourth color to the end of the 'colorCopy' array using push.
 
 //Code Here
+
+colorCopy.push('blue')
 
 //////////////////PROBLEM 10////////////////////
 
@@ -60,11 +96,22 @@ const numbers = [1, 2, 3, 4, 5]
 
 //Code Here
 
+const middleNums = numbers.slice(1,4)
+
 //////////////////PROBLEM 11////////////////////
 
 // Create an object called 'me' that has the following keys: firstName, state, age, and greeter. The value of the firstName key should be your name as a string. The value of the property state should be your current state or providence of residence as a string. The value of age should be your age as a number. greeter should be a method that returns the string 'Hello! My name is NAMEVALUE and I live in STATEVALUE' with the corresponding values. 
 
 //Code Here
+
+let me = {
+	firstName:'Dylan',
+	state: 'Texas',
+	age: 20,
+	greeter: function me(){
+		return 'Hello! My name is ${me.firstName} and I live in ${me.state}'
+	}
+}
 
 //////////////////PROBLEM 12////////////////////
 
@@ -72,11 +119,35 @@ const numbers = [1, 2, 3, 4, 5]
 
 // Code here
 
+let arr = [1, 101, 21, 333, 64, 500]
+
+function bigOrSmall(arr){
+	let answers = []
+	for(let i = 0; i < bigOrSmall.length; i++){
+		if(arr[i] > 100){
+			answers.push(answers['big'])
+		} else {
+		answers.push(arr['small'])
+	    }
+	}
+	return answers
+}
+
+bigOrSmall(arr)
+
 //////////////////PROBLEM 13////////////////////
 
 // Create a function called 'arrayReverser' that takes in one parameter, 'arr'. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the passed in array IN REVERSE (this means your counter should decrement), and then add each item to the 'reversed' array variable you created. Finally, return the 'reversed' array variable. 
 
 //Code Here
+
+function arrayReverser(arr){
+	const reversed = []
+	// for(let i = 0; i < arrayReverser.length ; i--){
+	// 	reversed.push(arr[i])
+	// }
+	return reversed
+}
 
 //////////////////PROBLEM 14 - 18 Setup////////////////////
 
@@ -90,11 +161,19 @@ const myNumbers = [3, 55, 788, 2, 1]
 
 // Code Here
 
+const doubled = myNumbers.map(function(element){
+	return element * 2
+})
+
 //////////////////PROBLEM 15////////////////////
 
 // Now, use .filter to create a new array containing any numbers that are greater than 100. Call the new array 'filtered'. 
 
 // Code Here
+
+const filtered = myNumbers.filter(function(element){
+	return element > 100
+})
 
 //////////////////PROBLEM 16////////////////////
 
@@ -102,11 +181,25 @@ const myNumbers = [3, 55, 788, 2, 1]
 
 // Code Here
 
+const total = myNumbers.reduce(function(acc, cur){
+	return acc + cur
+})
+
 //////////////////PROBLEM 17////////////////////
 
-// Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
+// Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly 
+// created myNumbersIndex array. 
 
 // Code Here
+let myNumbersIndex =[]
+// myNumbers.forEach(function(el,index)){
+// 	myNumbersIndex.push(index[])
+
+// }
+
+
+// myNumbers.forEach((element, index, arr) =>  )
+
 
 //////////////////PROBLEM 18////////////////////
 
@@ -114,6 +207,10 @@ const myNumbers = [3, 55, 788, 2, 1]
 const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
 // Code Here
+
+const forTheLoveOfGeorge = notGeorge.map(function(element){
+	return "George"
+})
 
 //////////////////PROBLEM 19////////////////////
 
@@ -129,8 +226,28 @@ const people = [
 
 // Code Here
 
+const enemies = people.filter(function(element){
+	let enemies = []
+	for(let i = 0; i < people.length; i++){
+		if (people.friend === false){
+			enemies.push(people[i])
+		}
+	}
+	return enemies
+})
+
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
 // Code Here
+
+function totallyAwesome(arr){
+	let sum = o;
+	for(let i =0; i<arr.length; i++){
+		sum += arr[i]
+	}
+	return sum
+}
+
+totallyAwesome(people)
