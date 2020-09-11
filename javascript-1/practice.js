@@ -62,15 +62,16 @@ function oddChecker(num){
 
 //////////////////PROBLEM 7////////////////////
 
-// Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. Have the function take the two parameters and return a string that says "NAMEPARAM loves LOVEPARAM" with the appropriate parameters in the string. e.g. "Joseph loves music"
+// Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. Have the function take the two parameters and return a string that says "NAMEPARAM loves 
+// LOVEPARAM" with the appropriate parameters in the string. e.g. "Joseph loves music"
 
 //Code Here
 
 function iLove(name, love){
-	return `${name} 'loves' ${love}`
+	return `${name} loves ${love}`
 }
 
-iLove('bryan', 'skateboarding')
+iLove('Dylan', 'games')
 
 //////////////////PROBLEM 8////////////////////
 
@@ -115,39 +116,47 @@ let me = {
 
 //////////////////PROBLEM 12////////////////////
 
-// Create a function called 'bigOrSmall' that takes in one parameter, 'arr', which will be an array of numbers. Inside of the bigOrSmall function, create a new array called 'answers'. Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100. If it is, push 'big' as a string to the answers array. If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. Return the answers array inside of the function.
+// Create a function called 'bigOrSmall' that takes in one parameter, 'arr', which will be an array of numbers. Inside of the bigOrSmall function, create a new array called 'answers'. 
+// Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100. If it is, push 'big' as a string to the answers array. If the number is 
+// LESS than or EQUAL to 100, push 'small' as a string to the answers array. Return the answers array inside of the function.
 
 // Code here
 
-let arr = [1, 101, 21, 333, 64, 500]
+let array = [1, 101, 21, 333, 64, 500]
 
 function bigOrSmall(arr){
 	let answers = []
-	for(let i = 0; i < bigOrSmall.length; i++){
+	for(let i = 0; i < arr.length; i++){
 		if(arr[i] > 100){
-			answers.push(answers['big'])
+			answers.push(arr[i]["large"])
 		} else {
-		answers.push(arr['small'])
+		answers.push(arr[i]["small"])
 	    }
 	}
 	return answers
 }
 
-bigOrSmall(arr)
+bigOrSmall(array)
 
 //////////////////PROBLEM 13////////////////////
 
-// Create a function called 'arrayReverser' that takes in one parameter, 'arr'. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the passed in array IN REVERSE (this means your counter should decrement), and then add each item to the 'reversed' array variable you created. Finally, return the 'reversed' array variable. 
+// Create a function called 'arrayReverser' that takes in one parameter, 'arr'. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the
+//  passed in array IN REVERSE (this means your counter should decrement), and then add each item to the 'reversed' array variable you created. Finally, return the 'reversed' array 
+//  variable. 
 
 //Code Here
 
+let hi = [1, 2, 3, 4, 5]
+
 function arrayReverser(arr){
 	const reversed = []
-	// for(let i = 0; i < arrayReverser.length ; i--){
-	// 	reversed.push(arr[i])
-	// }
+	for(let i= arr.length-1; i >=  0; i--){
+		reversed.push(arr[i])
+	}
 	return reversed
 }
+
+arrayReverser(hi)
 
 //////////////////PROBLEM 14 - 18 Setup////////////////////
 
